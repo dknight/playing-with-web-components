@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Photo Carousel Demo</title>
+  <!--
+    Crazy polyfills mostly for the most hated browser in the World IE11.
+  -->
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+  <script src="node_modules/@webcomponents/custom-elements/custom-elements.min.js"></script>
+  <script src="node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+  <script src="node_modules/@webcomponents/shadydom/shadydom.min.js"></script>
+  <script src="PhotoCarousel.js"></script>
+  <style>
+    dkn-photo-carousel {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      padding-top: 10px;
+      flex-direction: column;
+      border-color: black;
+      border-width: 1px;
+      border-style: solid;
+      position: relative;
+    }
+    dkn-photo-carousel h2, h4 {
+      margin-bottom: 0;
+      margin-top: 0;
+      margin-left: 10px;
+    }
+    dkn-photo-carousel .image-container {
+      margin-top: 15px;
+      width: 100%;
+      flex: 1;
+      background-color: black;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+    dkn-photo-carousel button {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      font-size: 48px;
+      color: white;
+      position: absolute;
+      top: 50%;
+    }
+    dkn-photo-carousel button.back {
+      left: 10px;
+    }
+    dkn-photo-carousel button.forward {
+      right: 10px;
+    }
+    </style>
+</head>
+<body>
+  <dkn-photo-carousel
+    title="Future Vacation Photos"
+    author="Dmitri"
+    photos="https://i.imgur.com/fBmIASF.jpg,https://i.imgur.com/3zxD6rz.jpg,https://i.imgur.com/nKBgeLOr.jpg,https://i.imgur.com/yVjJZ1Yr.jpg"
+  ></dkn-photo-carousel>
+</body>
+</html>
